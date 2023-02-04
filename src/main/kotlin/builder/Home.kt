@@ -19,10 +19,10 @@ class Home(
 ) {
     var numberFloors: Int = 0
     var isBasement: Boolean = false
-    var numberInputs: Int= 0
-    var numberMans: Int= 0
-    var numberRefrigerators: Int= 0
-    var numberComputers: Int= 0
+    var numberInputs: Int = 0
+    var numberMans: Int = 0
+    var numberRefrigerators: Int = 0
+    var numberComputers: Int = 0
     var workOfficeFurniture: Furniture? = null
     var kitchenFurniture: Furniture? = null
     var gymFurniture: Furniture? = null
@@ -69,6 +69,11 @@ class Home(
                 in 11..30 -> {
                     myHome.gymFurniture = VictorianFurnitureFactory()
                     myHome.numberComputers = 2
+                }
+
+                in 31..Int.MAX_VALUE -> {
+                    myHome.gymFurniture = VictorianFurnitureFactory()
+                    myHome.numberComputers = 3
                 }
             }
 

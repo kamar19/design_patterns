@@ -1,6 +1,6 @@
 package abstractFactory
 
 interface Armchair {
-    fun hasLegs()
+    fun hasLegs(): Boolean
     fun sitOn()
 }

@@ -1,6 +1,6 @@
 package abstractFactory
 
 interface Sofa {
-    fun hasSoftSeat()
+    fun hasSoftSeat(): Boolean
     fun sitOnPillow()
 }

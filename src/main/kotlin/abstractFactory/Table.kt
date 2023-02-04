@@ -1,6 +1,6 @@
 package abstractFactory
 
 interface Table {
-    fun hasHighLegs()
+    fun hasHighLegs(): Boolean
     fun hasСountertop()
 }

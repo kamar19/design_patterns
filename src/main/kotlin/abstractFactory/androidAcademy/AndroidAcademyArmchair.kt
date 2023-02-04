@@ -3,8 +3,9 @@ package abstractFactory.androidAcademy
 import abstractFactory.Armchair
 
 class AndroidAcademyArmchair : Armchair {
-    override fun hasLegs() {
-        println("AndroidAcademyArmchair - hasLegs")
+    override fun hasLegs(): Boolean {
+        println("AndroidAcademyArmchair - hasLegs - true")
+        return true
     }
 
     override fun sitOn() {

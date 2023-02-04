@@ -3,8 +3,9 @@ package abstractFactory.victorian
 import abstractFactory.Armchair
 
 open class VictorianArmchair : Armchair {
-    override fun hasLegs() {
-        println("VictorianArmchair - hasLegs")
+    override fun hasLegs():Boolean {
+        println("VictorianArmchair - hasLegs - true")
+        return true
     }
 
     override fun sitOn() {

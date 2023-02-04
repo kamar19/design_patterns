@@ -5,17 +5,14 @@ import singletonHeadHouse.HeadHouse
 import strategy.*
 
 fun main(args: Array<String>) {
-    val args0 = "to_another_city"
+    val args0: ActionStrategy = ActionStrategy.NEARBY_STREET
 
-    // Патерн Strategy
     val clienGoToTheStore: Strategy =
-//       when (args[0]) {
         when (args0) {
-            "to_the_city_center" -> BikeStrategy()
-            "to_another_city" -> CarStrategy()
-            "on_nearby_street" -> WalkingStrategy()
-            "other_side_of_city" -> BusStrategy()
-            null -> TaxiStrategy()
+            ActionStrategy.CITY_CENTER -> BikeStrategy()
+            ActionStrategy.ANOTHER_CITY -> CarStrategy()
+            ActionStrategy.NEARBY_STREET -> WalkingStrategy()
+            ActionStrategy.SIDE_OF_CITY -> BusStrategy()
             else -> {
                 TaxiStrategy()
             }
@@ -23,7 +20,6 @@ fun main(args: Array<String>) {
     clienGoToTheStore.createRoute()
     clienGoToTheStore.doPark()
 
-    // Патерн abstractFactory
     val clientFurniture = AndroidAcademyFurnitureFactory()
     val clientArmchair = clientFurniture.createArmchair()
     clientArmchair.sitOn()
@@ -32,7 +28,6 @@ fun main(args: Array<String>) {
     clientTable.hasHighLegs()
     clientTable.hasСountertop()
 
-    // Патерн Builder
     val builderHome = Home.BuilderDreamHome()
     builderHome.furnishGym(5)
         .furnishKitchen(5)
@@ -41,10 +36,8 @@ fun main(args: Array<String>) {
     val home: Home = builderHome.build()
     home.isBasement = true
 
-    // Патерн Singleton
-    singleton.doSomething()
+    Singleton.doSomething()
 
-    // Патерн Singleton другой вариант
     val singleton2 = HeadHouse()
     singleton2.getInstance()
 
@@ -55,7 +48,7 @@ fun main(args: Array<String>) {
 
 }
 
-object singleton {
+object Singleton {
     fun doSomething() {
         println("doSomething")
     }

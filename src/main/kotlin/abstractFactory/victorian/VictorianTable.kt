@@ -3,8 +3,9 @@ package abstractFactory.victorian
 import abstractFactory.Table
 
 class VictorianTable : Table {
-    override fun hasHighLegs() {
+    override fun hasHighLegs():Boolean {
         println("VictorianArmchair - hasHighLegs")
+        return true
     }
 
     override fun hasСountertop() {

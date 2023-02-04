@@ -1,6 +1,6 @@
 package abstractFactory
 
 interface Closet {
-    fun hasShelves()
-    fun hasLocker()
+    fun hasShelves(): Boolean
+    fun hasLocker(): Boolean
 }

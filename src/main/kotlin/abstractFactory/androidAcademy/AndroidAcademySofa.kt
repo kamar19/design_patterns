@@ -3,8 +3,9 @@ package abstractFactory.androidAcademy
 import abstractFactory.Sofa
 
 class AndroidAcademySofa : Sofa {
-    override fun hasSoftSeat() {
+    override fun hasSoftSeat():Boolean {
         println("AndroidAcademySofa - hasSoftSeat")
+        return true
     }
 
     override fun sitOnPillow() {

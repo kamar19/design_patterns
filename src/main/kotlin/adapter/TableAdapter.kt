@@ -10,8 +10,8 @@ class TableAdapter(table: Table) : Armchair {
         this.table = table
     }
 
-    override fun hasLegs() {
-        table.hasHighLegs()
+    override fun hasLegs(): Boolean {
+        return table.hasHighLegs()
     }
 
     override fun sitOn() {
